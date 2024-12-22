@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Header,
   Sass,
@@ -13,9 +14,11 @@ const Main = () => {
       <div className="flex justify-center items-center h-screen mb-8">
         <div className="bg-white w-full rounded-3xl border-[1px] h-[620px] ">
           <Header />
-          <main className="flex flex-col items-center py-6 gap-4 px-3">
-            {signInOption ? <Sass /> : <Sso />}
-          </main>
+          <Link to={"/dashboard"}>
+            <main className="flex flex-col items-center py-6 gap-4 px-3">
+              {signInOption ? <Sass /> : <Sso />}
+            </main>
+          </Link>
         </div>
       </div>
       <SignInFooter />
