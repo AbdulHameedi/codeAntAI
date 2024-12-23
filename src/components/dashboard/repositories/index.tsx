@@ -1,8 +1,9 @@
+import Header from "./Header"
 
 const RepositoriesLayout = () => {
   return (
     <div>
-      Reposiory
+      <Header />
     </div>
   )
 }

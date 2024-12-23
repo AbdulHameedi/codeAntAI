@@ -12,6 +12,12 @@ export {
   CloudSecurity,
   HowToUse,
   Settings,
+  RefreshAll,
+  AddRepo,
+  SearchButton,
+  DropdownArrow,
+  Logout,
+  Support
 } from "../assets/svg"
 
 // SIGN IN EXPORTS
@@ -31,7 +37,9 @@ export { default as Sidebar } from "../components/dashboard/sidebar/Sidebar";
 export { default as DashboardLayout } from "../components/dashboard/sidebar/Layout";
 export { NavItems } from "../components/dashboard/sidebar/navItems";
 export {useDashboardDispatch, useDashboardState} from '../utils/DashboardContext'
-
+export {default as SearchBar} from '../components/dashboard/repositories/SearchBar'
+export {default as Dropdown} from '../hooks/dropdown/Dropdown'
+export {default as LogOutSidebar} from '../pages/auth/LogOut'
 
 // ROUTES
 export {default as Repositories} from '../pages/dashboard/Repositories'

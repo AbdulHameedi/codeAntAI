@@ -5,7 +5,7 @@ const DashboardLayout = () => {
   return (
     <div className="bg-[#FAFAFA] flex">
       <Sidebar />
-      <main className="overflow-y-auto">
+      <main className="overflow-y-auto px-6 flex-grow">
         <Outlet />
       </main>
     </div>
