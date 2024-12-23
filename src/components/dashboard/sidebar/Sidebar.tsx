@@ -52,6 +52,9 @@ const Sidebar = () => {
                       ? "md:bg-[#1570EF] md:text-white"
                       : "text-[#414651]"
                   } flex p-3.5 items-center font-medium text-md gap-x-2 text-[#414651] rounded-md`}
+                  onClick={()=>
+                    dispatch({type: "HIDE_NAV"})
+                  }
                 >
                   <navItem.icon
                     className={`${
