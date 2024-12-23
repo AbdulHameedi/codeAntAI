@@ -1,4 +1,5 @@
-import { NavItems } from "../exports";
+import {NavItems} from "../components/dashboard/sidebar/navItems";
+import {repositories} from "../components/dashboard/repositories/repositories";
 import {
   createContext,
   ReactNode,
@@ -8,6 +9,8 @@ import {
 } from "react";
 interface State {
   activeNavItem: string;
+  repos: typeof repositories;
+  isNavOpen: boolean;
 }
 interface Action {
   type: string;
@@ -17,7 +20,7 @@ type Dispatch = (action: Action) => void;
 interface DashboardProviderProps {
   children: ReactNode;
 }
-const initialState = { activeNavItem: NavItems[0]?.path || "" };
+const initialState = { activeNavItem: NavItems[0]?.path || "", repos: repositories, isNavOpen: false };
 const DashboardStateContext = createContext<State | undefined>(undefined);
 const DashboardDispathContext = createContext<Dispatch | undefined>(undefined);
 const DashboardReducer = (state: State, action: Action) => {
@@ -25,6 +28,10 @@ const DashboardReducer = (state: State, action: Action) => {
   switch (type) {
     case "SET_ACTIVE_NAV":
       return { ...state, activeNavItem: payload || "repositories" };
+    case "SHOW_NAV":
+      return {...state, isNavOpen: true};
+    case "HIDE_NAV":
+      return {...state, isNavOpen: false};
     default:
       return state;
   }
@@ -40,7 +47,7 @@ export const DashboardProvider = ({ children }: DashboardProviderProps) => {
         {children}
       </DashboardDispathContext.Provider>
     </DashboardStateContext.Provider>
-  );
+  );  
 };
 export const useDashboardState = () => {
   const context = useContext(DashboardStateContext);

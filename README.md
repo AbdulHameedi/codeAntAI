@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# CodeAnt AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend Developer Intern Hiring Assignment
 
-Currently, two official plugins are available:
+****
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+In Code Ant AI, by leveraging AI-driven and deterministic fixes, we simplify coding, making it cleaner, safer, and more efficient. Plus Frontend Developer Hiring Assignment [figma link](https://www.figma.com/design/3j3bEI8nR1T1UwsfEBMbhi/Frontend-Developer-%3C%3E-CodeAnt?node-id=1-3547&t=YXN5XHoVfur7P94X-0)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Stacks
 
-- Configure the top-level `parserOptions` property like this:
+Here are the main tools/technologies that is being used for this build. They automatically form the prerequisites.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React JS
+
+- TypeScript
+
+- React Router
+
+- Tailwind CSS
+
+
+## Project Structure
+
+```markdown
+src\
+ |--assets\             # All media assets, including icons, images, and SVGs
+ |--components\         # Reusable components that can be used across different pages
+ |--exports\            # Logic and components related to exports
+ |--hooks\              # Custom hooks used throughout the application
+ |--pages\              # All pages for the application
+    |--auth\            # Authentication-related pages (login, signup, etc.)
+    |--dashboard\       # Dashboard-related pages (repositories, settings, etc.)
+ |--routes\             # All routing logic for navigating through the app
+ |--types\              # TypeScript types and interfaces for the application
+ |--utils\              # Utility functions used throughout the app
+main.tsx                # App entry point
+package.json            # List of all installed dependencies and technologies used
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## SETUP
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 1. Clone project
+
+```git
+  git clone https://github.com/AbdulHameedi/codeAntAI.git
+```
+
+### 2. Install dependencies
+
+```markdown
+  🍕. npm install 
+```
+
+### 3. Create environment files and file them correctly
+
+```bash
+    .env.local
+```
+
+### 4. Start project
+
+```bash
+  npm run dev
 ```

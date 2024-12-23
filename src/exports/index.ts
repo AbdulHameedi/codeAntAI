@@ -12,6 +12,16 @@ export {
   CloudSecurity,
   HowToUse,
   Settings,
+  RefreshAll,
+  AddRepo,
+  SearchButton,
+  DropdownArrow,
+  Logout,
+  Support,
+  LangRepo,
+  SpaceRepo,
+  Hamburger,
+  Cancel
 } from "../assets/svg"
 
 // SIGN IN EXPORTS
@@ -31,7 +41,11 @@ export { default as Sidebar } from "../components/dashboard/sidebar/Sidebar";
 export { default as DashboardLayout } from "../components/dashboard/sidebar/Layout";
 export { NavItems } from "../components/dashboard/sidebar/navItems";
 export {useDashboardDispatch, useDashboardState} from '../utils/DashboardContext'
-
+export {default as SearchBar} from '../hooks/search-bar/SearchBar'
+export {default as Dropdown} from '../hooks/dropdown/Dropdown'
+export {default as LogOutSidebar} from '../pages/auth/LogOut'
+export {default as MainRepo} from '../components/dashboard/repositories/Main'
+export {repositories} from '../components/dashboard/repositories/repositories'
 
 // ROUTES
 export {default as Repositories} from '../pages/dashboard/Repositories'
@@ -39,3 +53,5 @@ export {default as AiCodeReview} from '../pages/dashboard/AiCodeReview'
 export {default as CloudSecurityPage} from '../pages/dashboard/CloudSecurity'
 export {default as HowToUsePage} from '../pages/dashboard/HowToUse'
 export {default as SettingsPage} from '../pages/dashboard/Settings'
+export {default as Overlay} from '../components/dashboard/sidebar/Overlay'
+export {default as ResponsiveNavbar} from '../utils/ResponsiveNavbar'
