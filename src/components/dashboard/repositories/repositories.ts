@@ -1,0 +1,51 @@
+export const  repositories = [
+  {
+    title: "design-system",
+    language: "React",
+    size: "7320 KB",
+    lastUpdated: "Updated 1 day ago",
+    visibility: "Public",
+  },
+  {
+    title: "codeant-ci-app",
+    language: "Javascript",
+    size: "5871 KB",
+    lastUpdated: "Updated 2 days ago",
+    visibility: "Private",
+  },
+  {
+    title: "analytics-dashboard",
+    language: "Python",
+    size: "4521 KB",
+    lastUpdated: "Updated 5 days ago",
+    visibility: "Private",
+  },
+  {
+    title: "mobile-app",
+    language: "Swift",
+    size: "3096 KB",
+    lastUpdated: "Updated 3 days ago",
+    visibility: "Public",
+  },
+  {
+    title: "e-commerce-platform",
+    language: "Java",
+    size: "6210 KB",
+    lastUpdated: "Updated 6 days ago",
+    visibility: "Private",
+  },
+  {
+    title: "blog-website",
+    language: "HTML/CSS",
+    size: "1876 KB",
+    lastUpdated: "Updated 4 days ago",
+    visibility: "Public",
+  },
+  {
+    title: "social-network",
+    language: "PHP",
+    size: "5432 KB",
+    lastUpdated: "Updated 7 days ago",
+    visibility: "Private",
+  },
+];
